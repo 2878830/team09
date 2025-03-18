@@ -88,10 +88,10 @@ WSGI_APPLICATION = 'CourseOnline.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'db_course_online',  # 数据库名称
-        'USER': 'root',  # 账号
-        'PASSWORD': '123456',  # 密码
-        'HOST': '127.0.0.1'
+        'NAME': 'team09three$db_course_online',  # 数据库名称
+        'USER': 'team09three',  # 账号
+        'PASSWORD': '123456it',  # 密码
+        'HOST': 'team09three.mysql.pythonanywhere-services.com'
 
     }
 }
