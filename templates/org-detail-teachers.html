@@ -1,0 +1,40 @@
+{% extends 'org_base.html' %}
+{% block title %}Institution Instructor Details | Online Course Learning System{% endblock %}
+{% block page_path %}Institution Instructors{% endblock %}
+{% load staticfiles %}
+{% block right_form %}
+    <div class="right companycenter layout">
+        <div class="head">
+            <h1>Institution Instructors</h1>
+        </div>
+        <div class="messagelist">
+            <div class=" butler_list butler-fav-box">
+
+                {% for teacher in all_teachers %}
+                    <dl class="des users">
+                        <dt>
+                            <a href="{% url 'org:teacher_detail' teacher.id %}">
+                                <img width="100" height="100" class="scrollLoading"
+                                     data-url="{{ MEDIA_URL }}{{ teacher.image }}"
+                                     src="{{ MEDIA_URL }}{{ teacher.image }}"/>
+                            </a>
+                        </dt>
+                        <dd>
+                            <h1>
+                                <a href="{% url 'org:teacher_detail' teacher.id %}">
+                                    {{ teacher.name }}<span class="key">Verified</span>
+                                </a>
+                            </h1>
+                            <ul class="cont clearfix">
+                                <li class="time">Work Experience:<span>{{ teacher.work_years }}</span></li>
+                                <li class="c7">Total Courses:<span>{{ teacher.course_set.count }}</span></li>
+                            </ul>
+                        </dd>
+                    </dl>
+                {% endfor %}
+
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

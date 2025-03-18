@@ -1,0 +1,14 @@
+{% extends 'org_base.html' %}
+{% block title %}Institution Introduction | Online Course Learning System{% endblock %}
+{% block page_path %}Institution Introduction{% endblock %}
+{% load staticfiles %}
+{% block right_form %}
+    <div class="right companycenter layout">
+        <div class="head">
+            <h1>Institution Introduction</h1>
+        </div>
+        <div class="des">
+            {{ course_org.desc }}
+        </div>
+    </div>
+{% endblock %}
