@@ -126,6 +126,8 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
+if os.getenv('DJANGO_PRODUCTION', 'False') == 'True':
+    STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 # 发送邮件的setting设置
 EMAIL_HOST = "smtp.qq.com"
