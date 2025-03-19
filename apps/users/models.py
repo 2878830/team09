@@ -6,7 +6,7 @@ from django.db import models
 
 # 用户信息 user information
 class UserProfile(AbstractUser):
-    # 自定义的性别选择规则
+   
     GENDER_CHOICES = (
         ("male", u"male"),
         ("female", u"female")
