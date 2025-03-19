@@ -294,7 +294,7 @@ class UserInfoView(LoginRequiredMixin, View):
         })
 
     def post(self, request):
-        # 不像用户咨询是一个新的。需要指明instance。不然无法修改，而是新增用户
+       
         user_info_form = UserInfoForm(request.POST, instance=request.user)
         if user_info_form.is_valid():
             user_info_form.save()
@@ -302,28 +302,26 @@ class UserInfoView(LoginRequiredMixin, View):
                 '{"status":"success"}',
                 content_type='application/json')
         else:
-            # 通过json的dumps方法把字典转换为json字符串
+           
             return HttpResponse(
                 json.dumps(
                     user_info_form.errors),
                 content_type='application/json')
 
 
-# 用户上传图片，用于修改头像
+# 用户上传图片，用于修改头像 edit their image
 class UploadImageView(LoginRequiredMixin, View):
     login_url = '/login/'
     redirect_field_name = 'next'
 
     def post(self, request):
-        # 这时候用户上传的文件就已经被保存到imageform了 ，为modelform添加instance值直接保存
+       
         image_form = UploadImageForm(
             request.POST, request.FILES, instance=request.user)
         if image_form.is_valid():
             image_form.save()
-            # # 取出cleaned data中的值,一个dict
-            # image = image_form.cleaned_data['image']
-            # request.user.image = image
-            # request.user.save()
+           
+            
             return HttpResponse(
                 '{"status":"success"}',
                 content_type='application/json')
@@ -492,14 +490,12 @@ class MyMessageView(LoginRequiredMixin, View):
         for unread_message in all_unread_messages:
             unread_message.has_read = True
             unread_message.save()
-        # 对课程机构进行分页 page
-        # 尝试获取前台get请求传递过来的page参数 try to get the page
-        # 如果是不合法的配置参数默认返回第一页 if page is not int or less than 1
+        
         try:
             page = request.GET.get('page', 1)
         except PageNotAnInteger:
             page = 1
-        # 这里指从allorg中取五个出来，每页显示5个 five per page
+        # five per page
         p = Paginator(all_message, 4)
         messages = p.page(page)
         return render(request, "usercenter-message.html", {
