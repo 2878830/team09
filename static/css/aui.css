@@ -1,10 +1,4 @@
-/*
- * =========================================================================
- * APIClud - AUI UI 框架    流浪男  QQ：343757327  http://www.auicss.com
- * Verson 1.1.6
- * =========================================================================
- */
- /*初始化类*/
+
 @charset "UTF-8";
 html{
 	font-family: sans-serif;
@@ -213,7 +207,7 @@ pre {
 .aui-text-right {
   text-align: right !important;
 }
-/*文字、背景颜色*/
+
 h1,h2,h3,h4,h5,h6 {
 	font-size: 100%;
 	font-weight: 400
@@ -397,7 +391,7 @@ h4 small,h5 small,h6 small {
 .aui-content-padded .aui-user-view-cell:last-child:after {
 	border-bottom: 0;
 }
-/*栅格类*/
+
 .aui-col-xs-1,.aui-col-xs-2,.aui-col-xs-3,.aui-col-xs-4,.aui-col-xs-5,.aui-col-xs-6,.aui-col-xs-7,.aui-col-xs-8,.aui-col-xs-9,.aui-col-xs-10,.aui-col-xs-11,.aui-col-5 {
 	position: relative;
 	float: left;
@@ -480,7 +474,7 @@ h4 small,h5 small,h6 small {
 .aui-label-pink {
 	background-color: #fbb8af;
 }
-/*按钮样式*/
+
 button, .aui-btn {
 	position: relative;
 	display: inline-block;
@@ -714,7 +708,7 @@ textarea {
 	-webkit-transform: scale(1);
 	pointer-events: none;
 }
-/*单选、多选*/
+
 .aui-radio {
 	width: 26px;
 	height: 26px;
@@ -911,7 +905,7 @@ textarea {
 	background-color: #f1c40f;
 	border: solid 1px #f1c40f;
 }
-/*列表*/
+
 .aui-content > .aui-list-view:last-child {
   	margin-bottom: 15px;
 }
@@ -999,7 +993,7 @@ textarea {
     color: #ffffff;
     font-size: 1.125em;
 }
-/*列表页角标靠右*/
+
 .aui-list-view-cell > .aui-badge,
 .aui-list-view-cell > a > .aui-badge {
 	position: absolute;
@@ -1015,7 +1009,7 @@ textarea {
 	-webkit-transform: translateY(-50%);
 	      transform: translateY(-50%);
 }
-/*带有箭头的列表*/
+
 .aui-arrow-right:after {
 	font-family: 'auiicon';
 	font-size: inherit;
@@ -1034,7 +1028,7 @@ textarea {
 	right: 15px;
 	content: '\e6a3';
 }
-/*会员列表～通讯录～消息列表*/
+
 .aui-user-view {
 	position: relative;
 	padding-left: 0;
@@ -1147,7 +1141,7 @@ textarea {
 .aui-user-view.aui-in .aui-user-view-cell:after {
 	left: 15px;
 }
-/*图文列表类*/
+
 .aui-list-view .aui-img,
 .aui-list-view .aui-img-body {
 	overflow: hidden;
@@ -1240,7 +1234,7 @@ textarea {
 .aui-thumb-view .aui-list-view-cell:after {
 	border-top: 0;
 }
-/*9宫格*/
+
 .aui-grid-nine {
 	overflow: auto;
 	background: #ffffff;
@@ -1350,7 +1344,7 @@ textarea {
 .aui-dot {
 
 }
-/*角标*/
+
 .aui-badge {
 	display: inline-block;
 	padding: 3px 6px;
@@ -1483,7 +1477,7 @@ textarea {
 .aui-bar-info .aui-iconfont{
 	color: #3db95c;
 }
-/*底部切换栏*/
+
 .aui-nav {
 	position: fixed;
 	right: 0;
@@ -1546,7 +1540,7 @@ textarea {
 	color: #faa732;
 }
 
-/*数字加减类*/
+
 .aui-counter-box {
 	width: 100%;
 	padding: 5px 0;
@@ -1731,7 +1725,7 @@ input.aui-counter-input {
 	left: 20px;
 	transition: left 0.2s;
 }
-/*聊天 会话*/
+
 .aui-chat-receiver{
     clear:both;
 }
@@ -1894,9 +1888,7 @@ input.aui-counter-input {
 	/*-webkit-animation: fadeIn .5s ease both;
             animation: fadeIn .5s ease both;*/
 }
-/*
-*进度条
-*/
+
 .aui-progress {
 	height: 20px;
 	border-radius: 4px;
@@ -2084,7 +2076,7 @@ input.aui-counter-input {
         -webkit-transform: scale(0.5);
     }
 }
-/*滑块*/
+/*滑块 slide*/
 .aui-range {
     position: relative;
 }
@@ -2140,9 +2132,7 @@ input.aui-counter-input {
 	width: 90%;
 	margin-left: 5%;
 }
-/*
-*瀑布流样式
-*/
+
 .aui-waterfall{
     width: 100%;
     position:relative;
@@ -2244,7 +2234,7 @@ input.aui-counter-input {
     display: none;
 }
 
-/*信息提示条*/
+
 .aui-tips {
     width: 100%;
     position: relative;
@@ -2422,7 +2412,7 @@ input.aui-counter-input {
     to {  }
 }
 
-/*图标*/
+
 @font-face {font-family: "auiicon";
 	src: url('aui_iconfont.ttf') format('truetype');
 }
