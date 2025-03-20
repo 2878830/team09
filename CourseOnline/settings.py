@@ -17,7 +17,7 @@ SECRET_KEY = '+1nruftzf9)mi3mb!0_wpsmw=pne(717j(xszq_ghmap2024zq'
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['team09three.pythonanywhere.com']
 
 # Application definition 
 AUTHENTICATION_BACKENDS = (
