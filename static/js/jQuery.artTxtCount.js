@@ -1,18 +1,18 @@
 /* tangbin - http://www.planeArt.cn - MIT Licensed */
 (function($){
-	// tipWrap: 	提示消息的容器
-	// maxNumber: 	最大输入字符
+	// tipWrap
+	// maxNumber
 	$.fn.artTxtCount = function(tipWrap, maxNumber){
-		var countClass = 'js_txtCount',		// 定义内部容器的CSS类名
-			fullClass = 'js_txtFull',		// 定义超出字符的CSS类名
-			disabledClass = 'disabled';		// 定义不可用提交按钮CSS类名
+		var countClass = 'js_txtCount',		
+			fullClass = 'js_txtFull',		
+			disabledClass = 'disabled';		
 		
-		// 统计字数
+		// 统计字数 count
 		var count = function(){
 			var btn = $(this).closest('form').find(':submit'),
 				val = $(this).val().length,
 				
-				// 是否禁用提交按钮
+				
 				disabled = {
 					on: function(){
 						btn.removeAttr('disabled').removeClass(disabledClass);
