@@ -129,7 +129,7 @@ if os.getenv('DJANGO_PRODUCTION', 'False') == 'True':
 
 
 EMAIL_HOST = "smtp.gmail.com"
-EMAIL_PORT = 465  
+EMAIL_PORT = 587  
 EMAIL_HOST_USER = "tkc11147@gmail.com"
 EMAIL_HOST_PASSWORD = "zhsh ydkh ctwq jlla"
 EMAIL_USE_TLS = True
