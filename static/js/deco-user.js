@@ -1,4 +1,4 @@
-//修改个人中心邮箱验证码
+
 function sendCodeChangeEmail($btn){
     var verify = verifyDialogSubmit(
         [
@@ -36,7 +36,7 @@ function sendCodeChangeEmail($btn){
     });
 
 }
-//个人资料邮箱修改
+
 function changeEmailSubmit($btn){
 var verify = verifyDialogSubmit(
         [
@@ -76,7 +76,7 @@ var verify = verifyDialogSubmit(
 }
 
 $(function(){
-    //个人资料修改密码
+   
     $('#jsUserResetPwd').on('click', function(){
         Dml.fun.showDialog('#jsResetDialog', '#jsResetPwdTips');
     });
@@ -108,7 +108,7 @@ $(function(){
         });
     });
 
-    //个人资料头像
+    //个人资料头像 image
     $('.js-img-up').uploadPreview({ Img: ".js-img-show", Width: 94, Height: 94 ,Callback:function(){
         $('#jsAvatarForm').submit();
     }});
@@ -125,7 +125,7 @@ $(function(){
     });
 
 
-    //input获得焦点样式
+    //input
     $('.perinform input[type=text]').focus(function(){
         $(this).parent('li').addClass('focus');
     });
@@ -144,7 +144,7 @@ $(function(){
             {id: '#nick_name', tips: Dml.Msg.epNickName, require: true}
         ]
     );
-    //保存个人资料
+    //保存个人资料 save personal material
     $('#jsEditUserBtn').on('click', function(){
         var _self = $(this),
             $jsEditUserForm = $('#jsEditUserForm')
