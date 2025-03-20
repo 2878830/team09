@@ -40,7 +40,7 @@ class UEditorField(models.TextField):
                 attrs=self.ueditor_settings)
         return super(UEditorField, self).formfield(**defaults)
 
-# 以下支持south
+# south
 try:
     from south.modelsinspector import add_introspection_rules
     add_introspection_rules([], ["^DjangoUeditor\.models\.UEditorField"])
