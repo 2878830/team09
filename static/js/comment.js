@@ -106,12 +106,12 @@ $(function(){
         });
     });
 
-//是否登录控制
+
     if(isLogin == 'True'){
         $('.comenlist').on('mouseover','.btn',function(){
             $(this).parents('.textinput').find('.wordbox').blur().css('height','60px');
         });
-        //评论楼主
+       
        $('.commentbtn').on('click',function(){
             var _self = $(this),
                 textarea = _self.parent().find('textarea:first'),
@@ -155,7 +155,7 @@ $(function(){
                 }
             });
     });
-        //点击显示评论某楼评论框
+       
        $('.comenlist').on('click','.replycomment',function(){
            var _self = $(this),
                 diary_id = _self.attr("diaryid"),
@@ -174,7 +174,7 @@ $(function(){
             _self.parents('.comment-content2').find('.replybox').focus();
         });
 
-       //评论某楼
+     
        $('.comenlist').on('click','.replycommentbtn',function(){
             var _self = $(this),
                 textarea = _self.parent().find('textarea:first'),
@@ -217,7 +217,7 @@ $(function(){
                     }
             });
         });
-        //点击显示回复某人textarea
+       
         $('.comenlist').on('click','.replycsomeone',function(){
             var _self = $(this),
                 diary_id = _self.attr("diaryid"),
@@ -236,7 +236,7 @@ $(function(){
             _self.parents('.comment-content2').find('.replybox').focus();
         });
 
-        //回复某人
+       
         $('.comenlist').on('click','.replysomeonebtn',function(){
             var _self = $(this),
                 textarea2 = _self.parent('.replysomeonebox').find('.replybox'),
