@@ -6,7 +6,7 @@ $(function() {
 	$('#loadmore_page').val(1);
 
 })
-// 回复事件
+// 回复事件 replay
 function re_keyup(e){
     if(e.keyCode== 46||e.keyCode== 8){
         if($(this).attr("vu").length>=$(this).val().length||!($(this).val().indexOf($(this).attr("vu"))>-1)){
@@ -178,7 +178,7 @@ function page_commment(page){
 								}
 								else{
 									$(this).prev().height(114);
-									$(this).html("查看更多");
+									$(this).html("查看更多 more");
 								}
 							});
 						}
@@ -206,7 +206,7 @@ function click_load_more(){
 function getopage(zbn,num){
 	page_commment(zbn);
 	$(".zypage_div").zPages({
-		perPage : num, //总页数
+		perPage : num, //总页数 summary page
 		first:"",
         last:"",
 		funC:page_commment,
