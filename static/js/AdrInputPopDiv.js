@@ -82,7 +82,7 @@ function AdrInputPopDiv(){
       if (proFullName[pro]){
         pro = proFullName[pro];
       }else{
-        pro += "省";
+        pro += "省 province";
       }
       selPro = pro;
       var city = "";
