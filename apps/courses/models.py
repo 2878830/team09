@@ -5,7 +5,7 @@ from django.db import models
 from organization.models import CourseOrg, Teacher
 
 
-# 课程信息表
+# 课程信息表 course list
 # Course Information Table
 class Course(models.Model):
     DEGREE_CHOICES = (
