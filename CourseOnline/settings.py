@@ -128,15 +128,12 @@ if os.getenv('DJANGO_PRODUCTION', 'False') == 'True':
     STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 
-EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-EMAIL_HOST = "smtp-relay.brevo.com"  # Brevo 的 SMTP 服务器
-EMAIL_PORT = 587  # 使用 TLS 加密
-EMAIL_USE_TLS = True  # 需要开启 TLS 连接
-EMAIL_USE_SSL = False  # 不使用 SSL（因为 TLS 和 SSL 只能选一个）
-
-EMAIL_HOST_USER = "888628001@smtp-brevo.com"  # 你的 Brevo SMTP 登录用户名
-EMAIL_HOST_PASSWORD = "mgqxJdMpyUAGFbEj"  # 你的 Brevo SMTP 密码
-DEFAULT_FROM_EMAIL = "tkc11147@gmail.com"  # 改成你的 Gmail 邮箱（用于发件）
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_PORT = 465  
+EMAIL_HOST_USER = "tkc11147@gmail.com"
+EMAIL_HOST_PASSWORD = "zhsh ydkh ctwq jlla"
+EMAIL_USE_TLS = True
+EMAIL_FROM = "tkc11147@gmail.com"
 
 
 
