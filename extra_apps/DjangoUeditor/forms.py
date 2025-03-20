@@ -29,8 +29,7 @@ class UEditorField(forms.CharField):
         super(UEditorField, self).__init__(*args, **kwargs)
 
 
-# def UpdateUploadPath(model_form, model_inst=None):
-#     """ 遍历model字段，如果是UEditorField则需要重新计算路径 """
+
 #     if model_inst is not None:
 #         try:
 #             for field in model_inst._meta.fields:
@@ -39,7 +38,7 @@ class UEditorField(forms.CharField):
 #                         field.name).field.widget.recalc_path(model_inst)
 #         except:
 #             pass
-# 修改前
+
 def UpdateUploadPath(model_form, model_inst=None):
     """ 遍历model字段，如果是UEditorField则需要重新计算路径 """
     if not model_inst:
