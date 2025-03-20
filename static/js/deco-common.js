@@ -27,7 +27,7 @@ var zyemail="",
     zy_str="",
     isLogin = $('#isLogin').val();
 
-//激活邮箱事件
+
 function zy_Countdown(){
     zy_c_num--;
     $(".sendE2 span").html(zy_c_num+"s");
@@ -58,7 +58,7 @@ function getCookie(name) {
      return cookieValue;
  };
 
-//顶部搜索栏搜索方法
+//顶部搜索栏搜索方法 search
 function search_click(){
     var type = $('#jsSelectOption').attr('data-value'),
         keywords = $('#search_keywords').val(),
@@ -76,7 +76,7 @@ function search_click(){
     window.location.href = request_url
 }
 
-//刷新验证码
+
 function refresh_captcha(event){
     $.get("/captcha/refresh/?"+Math.random(), function(result){
         $('#'+event.data.form_id+' .captcha').attr("src",result.image_url);
@@ -87,7 +87,7 @@ function refresh_captcha(event){
 
 
 
-//找回密码表单提交
+
 function find_password_form_submit(){
  var $findPwdBtn = $("#jsFindPwdBtn"),
      $idAccount = $("#account");
@@ -144,7 +144,7 @@ function find_password_form_submit(){
     });
 }
 
-//手机注册发送手机验证码
+
 $('#jsSetNewPwdBtn').on('click', function(){
     var _self = $(this),
          $idAccount = $("#account");
@@ -196,7 +196,7 @@ $('#jsSetNewPwdBtn').on('click', function(){
 
 
 
-//收藏分享
+
 function favPraise($elem, fun ,typeid){
     var num = parseInt($elem.text()),
         favid = $elem.attr('data-favid'),url = '',
@@ -291,7 +291,7 @@ $(function() {
         });
     });
     $(".scrollLoading").scrollLoading();
-    //兼容IE9下placeholder不显示问题
+   
     function isPlaceholder(){
         var input = document.createElement('input');
         return 'placeholder' in input;
@@ -341,7 +341,7 @@ $(function() {
             }
         });
     }
-    //右边悬浮按钮组
+
 	$(window).scroll(function(){
 		if($(window).scrollTop()>200){
 			$('.sidebar').show();
@@ -349,21 +349,21 @@ $(function() {
 			$('.sidebar').hide();
 		};
 	});
-	//二维码
+	
 	$('.sidebar .code').hover(function(){
 		$('.sidebar .sidecode').stop(true).fadeToggle();
 	});
-	//分享
+	//分享 share
 	$('.sidebar .share').hover(function(){
 		$('.sidebar .bdsharebuttonbox').stop(true).fadeToggle();
 	});
-	//返回顶部
+	//返回顶部 return top
 	$('.totop').click(function(){
 		$('html,body').animate({scrollTop:0},100);
 		return false;
 	});
 
-    //顶部个人中心下拉框
+   
     $('.header .personal').hover(function(){
         $('.header .userdetail').stop(true).show();
     },function(){
@@ -386,7 +386,7 @@ $(function() {
     }
     var m = setInterval(msgFlash,500);
 
-    //顶部导航菜单
+    //顶部导航菜单 top navigation
     $('.nav .arrow').mousemove(function(){
         $(this).find('.drop').stop(true,true).slideDown();
     });
@@ -394,7 +394,7 @@ $(function() {
         $(this).find('.drop').stop(true,true).slideUp();
     });
 
-    //顶部搜索栏搜索按钮事件
+    
     $('#jsSelectOption').on('click', function(){
         var $jsSelectMenu = $('#jsSelectMenu');
         if($jsSelectMenu.css('display') == 'block') return;
@@ -417,14 +417,14 @@ $(function() {
     $('#jsSearchBtn').on('click',function(){
         search_click()
     });
-    //搜索表单键盘事件
+ 
     $("#search_keywords").keydown(function(event){
         if(event.keyCode == 13){
              $('#jsSearchBtn').trigger('click');
         }
     });
 
-    //input的focus和blur效果
+    //input focus blur
 	$('.dialogbox .box input').focus(function(){
 		$(this).parent('.box').removeClass().addClass('box focus');
 	});
@@ -432,7 +432,7 @@ $(function() {
 		$(this).parent('.box').removeClass().addClass('box blur');
 	});
 
-    //顶部登录按钮弹窗
+   
     // $('.loginbtn').on('click', function(){
     //     Dml.fun.showDialog('.loginbox','#jsLoginTips');
     // });
@@ -441,30 +441,27 @@ $(function() {
      //   Dml.fun.showDialog('.registbox', '#jsEmailTips', '#jsMobileTips');
 	//});
 
-    //其他需要登录的链接弹窗
     $('.notlogin').on('click', function(){
         Dml.fun.showDialog('.loginbox','#jsLoginTips');
 	});
-    //登录链接弹窗
+  
     $('.dialogbox .login').on('click', function(){
         Dml.fun.showDialog('.loginbox','#jsLoginTips');
     });
 
-    //注册链接弹窗
+
     $('.dialogbox .regist').on('click', function(){
         Dml.fun.showDialog('.registbox', '#jsEmailTips', '#jsMobileTips');
     });
-    //其他需注册链接弹窗
+
     $('.jsOtherRegBtn').on('click', function(){
          Dml.fun.showDialog('.registbox', '#jsEmailTips', '#jsMobileTips');
 	});
 
-    //忘记密码链接弹窗
     $('.dialogbox .forget').on('click', function(){
         Dml.fun.showDialog('.forgetbox', '#jsForgetTips');
     });
 
-    //邮箱注册和手机注册弹窗tab事件
     $('.jsRegTab').on('click', function(){
         var tabindex = $(this).index();
         $('.jsTabBox').addClass('hide').eq(tabindex).removeClass('hide');
@@ -473,7 +470,7 @@ $(function() {
         $('#jsMobileTips').hide();
 	});
 
-    //layer加载扩展模块
+    
     layer.config({
         extend: 'extend/layer.ext.js'
     });
@@ -502,7 +499,7 @@ $(function() {
         Dml.fun.showDialog('.groupbox02', '#jsPerfetTips2');
     });
 
-    //弹出框关闭按钮
+  
 	$('.jsCloseDialog').on('click', function(){
         $('#jsDialog').hide();
         $('html').removeClass('dialog-open');
@@ -513,12 +510,12 @@ $(function() {
         }
 	});
 
-    // 发送手机注册验证码
+    
 	$('#jsSendCode').on('click',function(){
         send_sms_code(this,$('#jsMobileTips'));
     });
 
-    //注册刷新验证码点击事件
+  
     $('#email_register_form .captcha-refresh').click({'form_id':'email_register_form'},refresh_captcha);
     $('#email_register_form .captcha').click({'form_id':'email_register_form'},refresh_captcha);
     $('#mobile_register_form .captcha').click({'form_id':'jsRefreshCode'},refresh_captcha);
@@ -526,18 +523,18 @@ $(function() {
     $('#jsFindPwdForm .captcha-refresh').click({'form_id':'jsFindPwdForm'},refresh_captcha);
     $('#jsFindPwdForm .captcha').click({'form_id':'jsFindPwdForm'},refresh_captcha);
     $('#jsChangePhoneForm .captcha').click({'form_id':'jsChangePhoneForm'},refresh_captcha);
-    //登录
+    //登录 login
     $('#jsLoginBtn').on('click',function(){
         login_form_submit();
     })
-    //登录表单键盘事件
+   
     $("#jsLoginForm").keydown(function(event){
         if(event.keyCode == 13) {
             $('#jsLoginBtn').trigger('click');
         }
     });
 
-    //邮箱注册
+ 
     $('#jsEmailRegBtn').on('click',function(){
         register_form_submit(this,'emailReg');
     });
@@ -552,7 +549,7 @@ $(function() {
         }
     });
 
-    //首页-忘记密码表单键盘事件
+  
     $('#jsFindPwdBtn').on('click', function(){
         find_password_form_submit();
     });
@@ -562,7 +559,7 @@ $(function() {
         }
     });
 
-    //再次发送激活邮件事件
+    
 	$('#jsSenEmailAgin').on('click', function(e){
         e.preventDefault();
 		$(".zy_success").removeClass("upmove");
