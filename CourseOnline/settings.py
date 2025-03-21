@@ -128,12 +128,12 @@ if os.getenv('DJANGO_PRODUCTION', 'False') == 'True':
     STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 
-EMAIL_HOST = "smtp.gmail.com"
-EMAIL_PORT = 587  
-EMAIL_HOST_USER = "tkc11147@gmail.com"
-EMAIL_HOST_PASSWORD = "zhsh ydkh ctwq jlla"
+EMAIL_HOST = "smtp.qq.com"
+EMAIL_PORT = 587   
+EMAIL_HOST_USER = "1301510900@qq.com"
+EMAIL_HOST_PASSWORD = "erurhmhvjlusjijf"
 EMAIL_USE_TLS = True
-EMAIL_FROM = "tkc11147@gmail.com"
+EMAIL_FROM = "1301510900@qq.com"
 
 
 
